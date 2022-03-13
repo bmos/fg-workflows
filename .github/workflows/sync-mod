@@ -1,0 +1,27 @@
+name: Sync Extension Actions
+
+on:
+  push:
+    paths:
+      - 'create-mod.yml'
+      - '.github/workflows/sync-mod.yml'
+  schedule:
+    - cron: 0 0 * * *
+  workflow_dispatch:
+
+jobs:
+  file_sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetching Local Repository
+        uses: actions/checkout@master
+      - name: Syncing YML Files
+        uses: kbrashears5/github-action-file-sync@2.0.11
+        with:
+          REPOSITORIES: |
+            FG-Unofficial-Developers-Guild/FG-PFRPG-Alcohols-of-Golarion@main
+            FG-Unofficial-Developers-Guild/FG-PFRPG-Critical-and-Fumble-Deck@main
+            bmos/FG-PFRPG-Maladies-Library@main
+          FILES: |
+            create-mod.yml=.github/workflows/create-mod.yml
+          TOKEN: ${{ secrets.ACTIONS }}
