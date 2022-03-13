@@ -44,5 +44,5 @@ jobs:
             bmos/FG-PFRPG-Upgrade-NPC-Actions@main
           FILES: |
             luacheck.yml=.github/workflows/luacheck.yml
-            create-mod.yml=.github/workflows/create-mod.yml
+            create-ext.yml=.github/workflows/create-ext.yml
           TOKEN: ${{ secrets.ACTIONS }}
