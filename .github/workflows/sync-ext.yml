@@ -17,7 +17,7 @@ jobs:
       - name: Fetching Local Repository
         uses: actions/checkout@master
       - name: Syncing YML Files
-        uses: kbrashears5/github-action-file-sync@2.0.11
+        uses: kbrashears5/github-action-file-sync@master
         with:
           REPOSITORIES: |
             FG-Unofficial-Developers-Guild/FG-4E-TEMPO-and-TEMPA@main
