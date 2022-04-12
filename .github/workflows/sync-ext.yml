@@ -24,7 +24,6 @@ jobs:
           REPOSITORIES: |
             FG-Unofficial-Developers-Guild/FG-4E-TEMPO-and-TEMPA@main
             FG-Unofficial-Developers-Guild/FG-Aura-Effect@main
-            FG-Unofficial-Developers-Guild/FG-ClockAdjuster@main
             FG-Unofficial-Developers-Guild/FG-CoreRPG-Moon-Tracker@main
             FG-Unofficial-Developers-Guild/FG-CoreRPG-Party-Inventory-Identified@main
             FG-Unofficial-Developers-Guild/FG-CoreRPG-Party-Inventory-Weight@main
