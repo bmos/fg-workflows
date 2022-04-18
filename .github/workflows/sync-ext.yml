@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - 'luacheck.yml'
-      - 'luacheck_main.yml'
       - 'create-ext.yml'
       - '.github/workflows/sync-ext.yml'
       - 'LICENSE'
@@ -47,7 +46,6 @@ jobs:
             bmos/FG-PFRPG-Upgrade-NPC-Actions@main
           FILES: |
             luacheck.yml=.github/workflows/luacheck.yml
-            luacheck_main.yml=.github/workflows/luacheck_main.yml
             create-ext.yml=.github/workflows/create-ext.yml
             LICENSE=LICENSE.md
           TOKEN: ${{ secrets.ACTIONS }}
