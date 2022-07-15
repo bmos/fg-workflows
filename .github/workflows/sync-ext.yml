@@ -34,6 +34,7 @@ jobs:
             bmos/FG-Ammunition-Manager@main
             bmos/FG-CoreRPG-Coins-Weight@main
             bmos/FG-CoreRPG-Extraplanar-Containers@main
+            bmos/FG-HitMargins@main
             bmos/FG-PFRPG-Drain-and-Permanent-Bonuses@main
             bmos/FG-PFRPG-Encumbrance-Penalties@main
             bmos/FG-PFRPG-Extra-Stat-to-Saves@main
