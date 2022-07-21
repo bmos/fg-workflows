@@ -35,6 +35,7 @@ jobs:
             bmos/FG-CoreRPG-Coins-Weight@main
             bmos/FG-CoreRPG-Extraplanar-Containers@main
             bmos/FG-HitMargins@main
+            bmos/FG-PFRPG-Auto-Crit-and-Fumble
             bmos/FG-PFRPG-Drain-and-Permanent-Bonuses@main
             bmos/FG-PFRPG-Encumbrance-Penalties@main
             bmos/FG-PFRPG-Extra-Stat-to-Saves@main
