@@ -51,5 +51,5 @@ jobs:
             luacheck.yml=.github/workflows/luacheck.yml
             create-ext.yml=.github/workflows/create-ext.yml
             LICENSE=LICENSE.md
-            stylua.toml=.stylua.toml
+            .stylua.toml=.stylua.toml
           TOKEN: ${{ secrets.ACTIONS }}
