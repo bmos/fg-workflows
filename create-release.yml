@@ -9,9 +9,6 @@ name: Release Build
 permissions: write-all
 
 env:
-  FG_USER_NAME: ${{ vars.FORGE_USER_NAME }}
-  FG_USER_PASS: ${{ secrets.FORGE_USER_PASS }}
-  FG_ITEM_ID: ${{ vars.FORGE_ITEM_ID }}
   EXTENSION: ${{ vars.FORGE_EXTENSION }}
 
 jobs:
@@ -67,5 +64,9 @@ jobs:
           name: ${{ github.event.repository.name }}${{ env.EXTENSION }}
 
       - name: Upload ext file to FG Forge
+        env:
+          FG_USER_NAME: ${{ vars.FORGE_USER_NAME }}
+          FG_USER_PASS: ${{ secrets.FORGE_USER_PASS }}
+          FG_ITEM_ID: ${{ vars.FORGE_ITEM_ID }}
         run: |
           python src/main.py
