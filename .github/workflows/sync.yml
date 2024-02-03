@@ -1,4 +1,4 @@
-name: Sync Module Actions
+name: Sync Workflows
 
 on:
   push:
