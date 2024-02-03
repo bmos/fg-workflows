@@ -1,0 +1,52 @@
+name: Sync Module Actions
+
+on:
+  push:
+    paths:
+      - 'create-mod.yml'
+      - '.github/workflows/sync-mod.yml'
+  workflow_dispatch:
+
+jobs:
+  file_sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetching Local Repository
+        uses: actions/checkout@v4
+      - name: Syncing YML Files
+        uses: kbrashears5/github-action-file-sync@v3.0.0
+        with:
+          REPOSITORIES: |
+            FG-Unofficial-Developers-Guild/FG-PFRPG-Alcohols-of-Golarion@main
+            FG-Unofficial-Developers-Guild/FG-PFRPG-Critical-and-Fumble-Deck@main
+            bmos/FG-PFRPG-Maladies-Library@main
+            FG-Unofficial-Developers-Guild/FG-4E-TEMPO-and-TEMPA@main
+            FG-Unofficial-Developers-Guild/FG-Aura-Effect@main
+            FG-Unofficial-Developers-Guild/FG-CoreRPG-Moon-Tracker@main
+            FG-Unofficial-Developers-Guild/FG-CoreRPG-Inventory-Identified@main
+            FG-Unofficial-Developers-Guild/FG-CoreRPG-Party-Inventory-Weight@main
+            FG-Unofficial-Developers-Guild/FG-PFRPG-Advanced-Effects@main
+            FG-Unofficial-Developers-Guild/FG-PFRPG-Advanced-Item-Actions@main
+            FG-Unofficial-Developers-Guild/FG-PFRPG-Customized-Item-Generator@main
+            FG-Unofficial-Developers-Guild/FG-PFRPG-Enhanced-Items@main
+            bmos/FG-Ammunition-Manager@main
+            bmos/FG-CoreRPG-Coins-Weight@main
+            bmos/FG-CoreRPG-Extraplanar-Containers@main
+            bmos/FG-HitMargins@main
+            bmos/FG-PFRPG-Auto-Crit-and-Fumble
+            bmos/FG-PFRPG-Drain-and-Permanent-Bonuses@main
+            bmos/FG-PFRPG-Encumbrance-Penalties@main
+            bmos/FG-PFRPG-Extra-Stat-to-Saves@main
+            bmos/FG-PFRPG-Item-Durability@main
+            bmos/FG-PFRPG-Live-Hitpoints@main
+            bmos/FG-PFRPG-Malady-Tracker@main
+            bmos/FG-PFRPG-Sanity-Tracker@main
+            bmos/FG-PFRPG-Spell-Failure@main
+            bmos/FG-PFRPG-Spell-Formatting@main
+            bmos/FG-PFRPG-Upgrade-NPC-Actions@main
+          FILES: |
+            luacheck.yml=.github/workflows/luacheck.yml
+            create-release.yml=.github/workflows/release.yml
+            LICENSE=LICENSE.md
+            .stylua.toml=.stylua.toml
+          TOKEN: ${{ secrets.ACTIONS }}
