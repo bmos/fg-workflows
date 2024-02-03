@@ -9,10 +9,10 @@ name: Release Build
 permissions: write-all
 
 env:
-  EXTENSION: '.mod'
+  FG_USER_NAME: ${{ vars.FORGE_USER_NAME }}
   FG_USER_PASS: ${{ secrets.FORGE_USER_PASS }}
-  FG_USER_NAME: ${{ secrets.FORGE_USER_NAME }}
   FG_ITEM_ID: ${{ vars.FORGE_ITEM_ID }}
+  EXTENSION: ${{ vars.FORGE_EXTENSION }}
 
 jobs:
   build:
