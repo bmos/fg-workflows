@@ -3,8 +3,8 @@ name: Sync Workflows
 on:
   push:
     paths:
-      - 'create-mod.yml'
-      - '.github/workflows/sync-mod.yml'
+      - 'create-release.yml'
+      - '.github/workflows/sync.yml'
   workflow_dispatch:
 
 jobs:
