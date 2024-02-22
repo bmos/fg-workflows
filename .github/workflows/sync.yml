@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'create-release.yml'
+      - 'luacheck.yml'
       - '.github/workflows/sync.yml'
   workflow_dispatch:
 
